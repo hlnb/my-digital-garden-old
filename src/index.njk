@@ -1,7 +1,41 @@
 ---
-title: "my digital garden"
-layout: "base.njk"
+layout: 'base.njk'
+tag: home-page
 ---
-{% include "profile.njk" %}
-{% include "project-grid.njk" %}
-{% include "technologies.njk" %}
+<section class="no-bottom">
+<div class="container">
+<div class="hero--content text-center">
+<h1 class="section-title">
+Exploring the Road less travelled</h1>
+<p>From ASCII to HTML, I’ve navigated the roads less travelled in technology and life. Veteran, Nana, knitter, and web technologist looking to pass on my lived experience of self-discovery..</p>
+</div>
+</div>
+</section>
+<section class="hero">
+<div class="container">
+<img src="assets/home-banner.webp" width="600" height="467" alt="a person looking at a road as it divides at a fork deciding which way to travel">
+<div class="ol-two">
+{%- for post in collections.writings | reverse | limit_latest(1) -%}
+  {% include 'post-latest.njk' %}
+{%- endfor -%}
+</div>
+</div>
+</section>
+<section class="section-bg home--about">
+<div class="container">
+<h2>Welcome To My Digital Sanctuary &hellip;</h2>
+<p>
+ a haven where I explore the road less traveled, unravel the complexities of my journey, and find solace in the transformative power of web technologies. As a multifaceted individual, I wear multiple hats: I am a veteran, a devoted mother and doting nana, a master knitter, and a website developer. Above all, I am a seeker of meaning, drawing inspiration from great thinkers like Adler and the Stoics. Join me as we unveil the transformative power of the Internet, one step at a time.</p>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title">Recent Posts in  Writings</h2>
+<p class="no-top">This is an eceltic mix of topics based on my life experience.</p>
+<div class="col-two">
+{%- for post in collections.writings | reverse | limit(5) -%}
+  {% include 'post-summary.njk' %}
+{%- endfor -%}
+</div>
+</div>
+</section> 

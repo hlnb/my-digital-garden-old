@@ -1,9 +1,13 @@
-#dependencies
+# dependencies installed by npm
 node_modules
 
-#Misc
-/public
+# build artefacts
+public/*
+backups
 
-#VScode
-/.vscode
-.history
+# secrets and errors
+.env
+.log
+
+# macOS related files
+.DS_Store

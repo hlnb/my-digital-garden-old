@@ -1,15 +1,13 @@
-<header>
-      <h1 class="header-title">
-      <a href="/">HelenB</a>
-      </h1>
-      <ul class="header__links">
-        <li><a href="/about" class="header__link">my story</a>
-        </li>
-        <li><a href="/projects" class="header__link">my work</a>
-        </li>
-        <li><a href="/writings" class="header__link">writings</a>
-        </li>
-        <li><a href="/contact" class="header__link">contact me</a>
-        </li>
-      </ul>
-    </header>
+<header class="container--full page-header">
+<div class="page-header--content">
+<div class="logo">
+<a href="/">Helen B</a>
+</div>
+<nav class="primary-nav">
+<ul role="list" class="nav-list flex-group">
+<li role="listitem"><a href="/writings/" class="{{ 'active' if tag == "blog-page"}}">writings</a></li>
+<li role="listitem"><a href="/about/" class="{{ 'active' if tag == "about-page"}}">my story</a></li>
+</ul>
+</nav>
+</div>
+</header>
